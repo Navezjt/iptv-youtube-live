@@ -36,19 +36,11 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
-      - name: Delete log
-        run: |
-          rm -rf ./log.txt
-
       - name: Main
         run: |
           pwd
-          chmod +x generate.sh
-          ./generate.sh
-
-      - name: git pull
-        run: |
-          git pull origin main
+          chmod +x autorun.sh
+          ./autorun.sh
 
       - name: git add
         run: |
